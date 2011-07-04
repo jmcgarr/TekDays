@@ -20,6 +20,6 @@ class TekUserTests extends GrailsUnitTestCase {
                                email: 'foo@bar.com',
                                website: 'http://earlyandoften.wordpress.com',
                                bio: '''All work and no play makes Jack a very dull boy.''')
-        assertThat 'Mike McGarr', user.toString()
+        assertEquals 'Mike McGarr', user.toString()
     }
 }
