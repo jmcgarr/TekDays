@@ -9,7 +9,7 @@ class TekEvent {
     Date startDate
     Date endDate
     String description
-    static hasMany = [volunteers : TekUser]
+    static hasMany = [volunteers : TekUser, respondents: String]
     
     String toString() {
         "$name, $city"
@@ -23,5 +23,7 @@ class TekEvent {
         venue()
         startDate()
         endDate()
+        volunteers()
+        respondents()
     }
 }

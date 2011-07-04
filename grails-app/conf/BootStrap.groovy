@@ -81,6 +81,9 @@ class BootStrap {
                                        email: 'mrbill@gmail.com',
                                        website: 'www.mrbillswebsite.com',
                                        bio: 'Software developer, claymation artist.'))
+        g1.addToRespondents('ben@grailsmail.com')
+        g1.addToRespondents('zachary@linuxgroups.org')
+        g1.addToRespondents('solomon@bootstrapwelding.com')
         g1.save()
                                 
     }
