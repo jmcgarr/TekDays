@@ -9,6 +9,7 @@ class TekEvent {
     Date startDate
     Date endDate
     String description
+    static hasMany = [volunteers : TekUser]
     
     String toString() {
         "$name, $city"

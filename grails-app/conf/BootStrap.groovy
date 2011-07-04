@@ -67,6 +67,21 @@ class BootStrap {
         if (!event2.save()){
             event2.errors.allErrors.each{ error -> println "An error occured with event2: ${error}"}
         }
+        
+        def g1 = TekEvent.findByName('Gateway Code Camp')
+        g1.addToVolunteers(new TekUser(fullName: 'Sarah Martin',
+                                       userName: 'sarah',
+                                       password: '54321',
+                                       email: 'sarah@martinworld.com',
+                                       website: 'www.martinworld.com',
+                                       bio: 'Web desinger and Grails afficiando.'))
+        g1.addToVolunteers(new TekUser(fullName: 'Bill Smith',
+                                       userName: 'MrBill',
+                                       password: '12345',
+                                       email: 'mrbill@gmail.com',
+                                       website: 'www.mrbillswebsite.com',
+                                       bio: 'Software developer, claymation artist.'))
+        g1.save()
                                 
     }
     
