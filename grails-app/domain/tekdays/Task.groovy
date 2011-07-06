@@ -7,6 +7,10 @@ class Task {
     TekUser assignedTo
     Date dueDate
     TekEvent event
+    
+    String toString() {
+        "$title"
+    }
 
     static constraints = {
         title(blank:false)
