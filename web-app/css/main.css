@@ -271,3 +271,49 @@ th.desc a {
     background: transparent url(../images/skin/database_save.png) 5px 50% no-repeat;
     padding-left: 28px;
 }
+
+/*Dashboard*/
+.dashItem {
+    margin: 10px;
+}
+#eventBlurb {
+    width: 100%; 
+    height: 60px;
+}
+#dashHeader {
+    text-align: center;
+}
+
+/*Index*/
+#homeSearch {
+    margin-left: 30%; 
+    margin-top: 25px; 
+    width: 40%;
+}
+#homeSearch label {
+    font-weight: bold;
+}
+#welcome {
+    margin-left: 25px; 
+    margin-top: 25px; 
+    width: 85%;
+}
+.homeCell {
+    margin-left: 25px; 
+    margin-top: 25px; 
+    width: 85%;
+}
+.homeCell .buttons {
+    float: right;
+    margin-right: 30px;
+}
+
+/*Message Create*/
+.messageField {
+	width:550px
+}
+
+/*Ajaxlist*/
+#messageList {
+	overflow:auto
+}
