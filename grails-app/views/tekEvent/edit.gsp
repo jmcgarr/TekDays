@@ -111,7 +111,7 @@
                                     
 									<ul>
 									<g:each in="${tekEventInstance?.sponsorships?}" var="s">
-									    <li><g:link controller="sponsorship" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></li>
+									    <li><g:link controller="sponsorship" action="show" id="${s.id}">${s?.sponsor?.encodeAsHTML()}</g:link></li>
 									</g:each>
 									</ul>
 									<g:link controller="sponsorship" action="create" params="['tekEvent.id': tekEventInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'sponsorship.label', default: 'Sponsorship')])}</g:link>
