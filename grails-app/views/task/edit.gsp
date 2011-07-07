@@ -75,6 +75,15 @@
                                     <g:select name="event.id" from="${tekdays.TekEvent.list()}" optionKey="id" value="${taskInstance?.event?.id}"  />
                                 </td>
                             </tr>
+                            
+                            <tr class="prop">
+                            	<td valign="top" class="name">
+                            		<label for="completed"><g:message code="task.completed.label" default="Completed" /></label>
+                            	</td>
+                            	<td valign="top" class="value ${hasErrors(bean: taskInstance, field: 'completed', 'errors')}">
+                            		<g:checkBox name="completed" value="${taskInstance?.completed}" />
+                            	</td>
+                            </tr>
                         
                         </tbody>
                     </table>

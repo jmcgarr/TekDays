@@ -63,6 +63,13 @@
                             <td valign="top" class="value"><g:link controller="tekEvent" action="show" id="${taskInstance?.event?.id}">${taskInstance?.event?.encodeAsHTML()}</g:link></td>
                             
                         </tr>
+                        
+                        <tr class="prop">
+                        	<td valign="top" class="name"><g:message code="task.event.label" default="Completed" /></td>
+                        	
+                        	<td valign="top" class="value">${fieldValue(bean: taskInstance, field: "completed") }</td>
+                        
+                        </tr>
                     
                     </tbody>
                 </table>
