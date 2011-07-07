@@ -103,11 +103,7 @@
                             <td valign="top" class="name"><g:message code="tekEvent.messages.label" default="Messages" /></td>
                             
                             <td valign="top" style="text-align: left;" class="value">
-                                <ul>
-                                <g:each in="${tekEventInstance.messages}" var="m">
-                                    <li><g:link controller="message" action="show" id="${m.id}">${m?.encodeAsHTML()}</g:link></li>
-                                </g:each>
-                                </ul>
+                                <g:link controller="message" action="list" id="${tekEventInstance.id}">View Messages</g:link></li>
                             </td>
                             
                         </tr>
