@@ -21,7 +21,8 @@ class MessageController {
             list = Message.list(params)
             count = Message.count()
         }
-        [messageInstanceList: list, messageInstanceTotal: count, event: event]
+        render(view:'ajaxList', model:[messageInstanceList: list, messageInstanceTotal: count, event: event])
+//        [messageInstanceList: list, messageInstanceTotal: count, event: event]
     }
 
     def create = {
@@ -49,6 +50,16 @@ class MessageController {
         }
         else {
             [messageInstance: messageInstance]
+        }
+    }
+    
+    def showDetail = {
+        def messageInstance = Message.get(params.id)
+        if (messageInstance) {
+            render(template:"details", model:[messageInstance:messageInstance])
+        }
+        else {
+            render "No message found with id: ${params.id}"
         }
     }
 
@@ -107,5 +118,11 @@ class MessageController {
             flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'message.label', default: 'Message'), params.id])}"
             redirect(action: "list")
         }
+    }
+    
+    def reply ={
+        def parent = Message.get(params.id)
+        def messageInstance = new Message(parent:parent, event:parent.event, subject: "RE: $parent.subject")
+        render(view:'create', model:['messageInstance':messageInstance])
     }
 }

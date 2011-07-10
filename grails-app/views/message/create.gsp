@@ -29,6 +29,7 @@
                         <tbody>
                         
 	                        <g:if test="${messageInstance.parent}">
+	                        	<input type="hidden" name="parent.id" value="${messageInstance.parent.id}" />
 		                        <tr class="prop">
 		                        	<td valign="top" class="name">
 		                        		<label>In Reply To:</label>
