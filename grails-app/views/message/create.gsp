@@ -60,15 +60,6 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="parent"><g:message code="message.parent.label" default="Parent" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: messageInstance, field: 'parent', 'errors')}">
-                                    <g:select name="parent.id" from="${tekdays.Message.list()}" optionKey="id" value="${messageInstance?.parent?.id}" noSelection="['null': '']" />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
                                     <label for="author"><g:message code="message.author.label" default="Author" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: messageInstance, field: 'author', 'errors')}">

@@ -19,7 +19,7 @@
         	<div id="messageList">
         		<g:each in="${messageInstanceList}" var="messageInstance">
         			<g:remoteLink action="showDetail" id="${messageInstance?.id}" update="details">
-        				${messageInstance.author.fullName} - ${messageInstance.subject}
+        				${messageInstance.author.fullName} - ${messageInstance.subject} <br/>
         			</g:remoteLink>
         		</g:each>
         	</div>
