@@ -10,6 +10,9 @@
 		</g:if>
 		<g:form action="validate">
 			<table>
+				<input type="hidden" name="cName" value="${cName}"/>
+				<input type="hidden" name="aName" value="${aName}"/>
+				
 				
 				<tr class="prop">
 				
