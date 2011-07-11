@@ -13,6 +13,7 @@
         </div>
         <div id="logo">
         	<img src="${resource(dir:'images',file:'td_logo.png')}" alt="TekDays" border="0" />
+        	<g:loginToggle />
         </div>
         <g:layoutBody />
     </body>

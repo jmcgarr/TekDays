@@ -103,6 +103,11 @@ class TekUserController {
             return [cName:params.cName, aName:params.aName]
     }
     
+    def logout = {
+        session.user = null
+        redirect(url:resource(dir:''))
+    }
+    
     def validate = {
         def user = TekUser.findByUserName(params.username)
         if (user && user.password == params.password) {
