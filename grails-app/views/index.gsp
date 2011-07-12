@@ -71,7 +71,7 @@
     			that you'd be interested in attending. Everybody has a role to play.
     		</p>
     		<span class="buttons">
-    			<g:link controller="tekEvent" action="link">Find a Tek Event</g:link>
+    			<g:link controller="tekEvent" action="list">Find a Tek Event</g:link>
     		</span>
     	</div>
     	
