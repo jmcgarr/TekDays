@@ -4,7 +4,27 @@
 		<meta name="layout" content="main"/>
 	</head>
 	<body>
-	
+
+		<div class="nav">
+			<span class="menuButton">
+				<a href="${resource(dir:'')}">Home</a>
+			</span>
+			<span class="menuButton">
+				<g:link class="create" controller="task" action="create">
+					Create Task
+				</g:link>
+			</span>
+			<span class="menuButton">
+				<g:link class="create" controller="sponsorship" action="create">
+					Add Sponsor
+				</g:link>
+			</span>
+			<span class="menuButton">
+				<g:link class="list" controller="sponsor" action="list">
+					All Sponsors
+				</g:link>
+			</span>
+		</div>	
 	
 		<div id="event" style='margin: 10px 10px 10px 10px'>
 			<g:render template="event" model="${['event':event]}"/>

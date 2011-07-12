@@ -19,7 +19,7 @@
 	
 	<tr>
 		<td>
-			Venue: ${event.endDate}
+			Venue: ${event.venue}
 		</td>
 		<td>
 			Number of potential attendees: ${event.respondents.size()}
