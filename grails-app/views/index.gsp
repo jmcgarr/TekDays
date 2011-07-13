@@ -51,7 +51,7 @@
         </style>
     </head>
     <body>
-    	
+  	
     	
     	<div id="welcome">
     		<h3>Welcome to TekDays.com</h3>
@@ -61,6 +61,9 @@
 				interests and passions together for the good of greater geekdom!
     		</p>
     	</div>
+    	
+    	
+		<g:organizerEvents />  
     	
     	
     	<div class="homeCell">
