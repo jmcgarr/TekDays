@@ -63,7 +63,8 @@
     	</div>
     	
     	
-		<g:organizerEvents />  
+		<g:organizerEvents />
+		<g:volunteerEvents />  
     	
     	
     	<div class="homeCell">
