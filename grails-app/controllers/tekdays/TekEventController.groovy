@@ -100,4 +100,11 @@ class TekEventController {
             redirect(action: "list")
         }
     }
+    
+    def search = {
+        if (params.query) {
+            def events = TekEvent.search(params.query).results
+            [events: events]
+        }
+    }
 }

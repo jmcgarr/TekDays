@@ -63,6 +63,15 @@
     	</div>
     	
     	
+    	<div id="homeSearch">
+    		<g:form controller="tekEvent" action="search">
+    			<label>Search:</label>
+    			<input id="query" type="text" name="query" />
+    			<input type="submit" name="Go" />
+    		</g:form>
+    	</div>
+    	
+    	
 		<g:organizerEvents />
 		<g:volunteerEvents />  
     	

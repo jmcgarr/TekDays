@@ -19,6 +19,8 @@ class TekEvent {
                       sponsorships: Sponsorship,
                       tasks: Task,
                       messages: Message]
+    
+    static searchable = true
 
     static constraints = {
         name()
