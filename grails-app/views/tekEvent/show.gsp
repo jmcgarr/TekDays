@@ -5,14 +5,27 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'tekEvent.label', default: 'TekEvent')}" />
+        <gui:resources components="['dialog']" />
         <title><g:message code="default.show.label" args="[entityName]" /></title>
     </head>
     <body>
+    	<gui:dialog title="${'Volunteer for ' + tekEventInstance.name}"
+    				form="true"
+    				controller="tekEvent"
+    				action="volunteer"
+    				update="volunteerSpan"
+    				triggers="[show:[id:'volunteerButton', on:'click']]">
+    		<input type="hidden" name="id" value="${tekEventInstance.id}" />
+    		Welcome to the team!
+    		Your help will make a huge difference.
+    	</gui:dialog>
+    
         <div class="nav">
             <span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span>
             <span class="menuButton"><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></span>
             <span class="menuButton"><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></span>
             <span class="menuButton"><g:link class="list" controller="dashboard" action="dashboard" id="${tekEventInstance.id}">Event Dashboard</g:link></span>
+            <g:volunteerButton eventId="${tekEventInstance.id}" />
         </div>
         <div class="body">
             <h1>${fieldValue(bean:tekEventInstance, field:'name') }</h1>

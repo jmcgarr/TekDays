@@ -64,6 +64,20 @@ class TekDaysTagLib {
         }
     }
     
+    def volunteerButton = { attrs ->
+        if (session.user) {
+            def user = session.user.merge()
+            def event = TekEvent.get(attrs.eventId)
+            if (event && !event.volunteers.contains(user)) {
+                out << "<span id='volunteerSpan' class='menuButton'>"
+                out << "<button id='volunteerButton' type='button'>"
+                out << "Volunteer for this Event"
+                out << "</button>"
+                out << "</span>"
+            }
+        }
+    }
+    
     void processMessages(messages, indent) {
         messages.each {msg ->
             def body = "${msg?.author} - ${msg?.subject}"

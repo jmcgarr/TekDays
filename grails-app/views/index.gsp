@@ -90,7 +90,7 @@
     	
     	
     	<div class="homeCell">
-    		<h3>Organize a TekEvent</h3>
+    		<h3>Organize a Tek Event</h3>
     		<p>
     			If you don't see anything that suits your interest and location, then 
     			why not get the ball rolling. It's easy to get started and there may 
@@ -103,6 +103,7 @@
     	
     	
     	<div class="homeCell">
+    		<h3>Sponsor a Tek Event</h3>
     		<p>
     			If you are part of a business or organization that is involved in 
     			technology then sponsoring a tek event would be a great way to let 
