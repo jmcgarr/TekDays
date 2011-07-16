@@ -9,6 +9,8 @@ class TekEvent {
     Date startDate
     Date endDate
     String description
+    String twitterId
+    String twitterPassword
     
     String toString() {
         "$name, $city"
@@ -34,5 +36,7 @@ class TekEvent {
         sponsorships(nullable:true)
         tasks(nullable:true)
         messages(nullable:true)
+        twitterId(nullable:true)
+        twitterPassword(nullable:true)
     }
 }

@@ -91,6 +91,27 @@
                                 </td>
                             </tr>
                         
+                            
+                            <tr class="prop">
+                            	<td valign="top" class="name">
+                            		<label for="twitterId">TwitterId / NickName:</label>
+                            	</td>
+                            	<td valign="top" class="value ${hasErrors(bean: tekEventInstance, field: 'twitterId', 'errors') }">
+                            		<input type="text" id="twitterId" name="twitterId" value="${fieldValue(bean:tekEventInstance, field:'twitterId')}"/>
+                            	</td>
+                            </tr>
+                            
+                            
+                            <tr>
+                            	<td valign="top" class="name">
+                            		<label for="twitterPassword">Twitter Password:</label>
+                            	</td>
+                            	<td valign="top" class="value ${hasErrors(bean: tekEventInstance, field: 'twitterPassword', 'errors') }">
+                            		<input type="text" id="twitterPassword" name="twitterPassword" value="${fieldValue(bean: tekEventInstance, field: 'twitterPassword')}"/>
+                            	</td>
+                            </tr>
+                        
+                        
                         </tbody>
                     </table>
                 </div>
