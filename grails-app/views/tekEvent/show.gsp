@@ -131,7 +131,16 @@
                     
                     </tbody>
                 </table>
+                
+                
+                <div style="width:100%">
+                	<g:blurb name="custom_${tekEventInstance?.id}" />
+                </div>
+                
+                
             </div>
+            
+            
             <div class="buttons">
                 <g:form>
                     <g:hiddenField name="id" value="${tekEventInstance?.id}" />
@@ -139,6 +148,8 @@
                     <span class="button"><g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" /></span>
                 </g:form>
             </div>
+            
+            
         </div>
     </body>
 </html>

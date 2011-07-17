@@ -31,6 +31,11 @@
 		</div>
 		
 		
+		<div id="blurb" style='margin: 10px 10px 10px 10px'>
+			<g:render template="blurb" model="${['blurb':blurb] }" />
+		</div>
+		
+		
 		<div id="tasks" style='margin: 10px 10px 10px 10px'>
 			<g:render template="tasks" model="${['tasks':tasks]}"/>
 		</div>
