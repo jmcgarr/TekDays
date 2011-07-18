@@ -34,12 +34,22 @@ class TekEventController {
     }
 
     def show = {
-        def tekEventInstance = TekEvent.get(params.id)
+        def tekEventInstance
+        println "Showing a TekEvent"
+        if (params.nickname) {
+            println "...found a nickname...loading tekEvent by twitterId: ${params.nickname}"
+            tekEventInstance = TekEvent.findAllByTwitterId(params.nickname)
+        }
+        else {
+            println "...loading tekevent by id: ${params.id}"
+            tekEventInstance = TekEvent.get(params.id)
+        }
         if (!tekEventInstance) {
             flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'tekEvent.label', default: 'TekEvent'), params.id])}"
             redirect(action: "list")
         }
         else {
+            println "Tekevent loaded: ${tekEventInstance}"
             [tekEventInstance: tekEventInstance]
         }
     }

@@ -68,6 +68,7 @@ class TekDaysTagLib {
         if (session.user) {
             def user = session.user.merge()
             def event = TekEvent.get(attrs.eventId)
+            println "want to see if this line gets printed..."
             if (event && !event.volunteers.contains(user)) {
                 out << "<span id='volunteerSpan' class='menuButton'>"
                 out << "<button id='volunteerButton' type='button'>"

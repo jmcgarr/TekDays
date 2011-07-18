@@ -6,6 +6,11 @@ class UrlMappings {
 				// apply constraints here
 			}
 		}
+        
+        "/events/$nickname" {
+            controller = "tekEvent"
+            action = "show"
+        }
 
 		"/"(view:"/index")
 		"500"(view:'/error')
