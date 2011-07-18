@@ -38,7 +38,7 @@ class TekEventController {
         println "Showing a TekEvent"
         if (params.nickname) {
             println "...found a nickname...loading tekEvent by twitterId: ${params.nickname}"
-            tekEventInstance = TekEvent.findAllByTwitterId(params.nickname)
+            tekEventInstance = TekEvent.findByTwitterId(params.nickname)
         }
         else {
             println "...loading tekevent by id: ${params.id}"
